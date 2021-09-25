@@ -1,0 +1,180 @@
+:root {
+  --animation-speed: 1s;
+  --background-color: #212121;
+}
+.heart {
+   animation: heartbeat var(--animation-speed) infinite;
+   user-select: none;
+}
+.w-md-84{
+    width: 84% !important;
+}
+@keyframes heartbeat {
+   0% {
+      transform: scale(0.75);
+   }
+
+   20% {
+      transform: scale(1);
+   }
+
+   40% {
+      transform: scale(0.75);
+   }
+
+   60% {
+      transform: scale(1);
+   }
+
+   80% {
+      transform: scale(0.75);
+   }
+
+   100% {
+      transform: scale(0.75);
+   }
+}
+*,html,body{
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+.counter {
+animation-duration: 1s;
+animation-delay: 0s;
+}
+#counter{
+background-image: linear-gradient(
+115deg
+, rgb(191, 61, 69) 33.33%, rgb(215, 60, 70), 33.33%, rgb(215, 60, 70), 66.66%, rgb(212, 75, 84) 66.66%);
+background-size: 100% 100%;
+background-repeat: no-repeat;
+}
+.bg-success{
+background: #128141 !important;
+}
+#home{
+height: 90vh;
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.97) 100%), url('https://www.agrevolution.in/assets/frontend/images/landing/Slider1_web.jpg') no-repeat center center/cover;
+}
+.border-2{
+border-color: rgb(129, 129, 129);
+border-style: dashed;
+border-width: 2px;
+width: 45%;
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 78%;
+}
+.border-3{
+border-color: rgb(129, 129, 129);
+border-style: dashed;
+border-width: 2px;
+width: 45%;
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 78%;
+}
+#text-banner{
+background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.97) 100%), url('https://www.agrevolution.in/assets/frontend/images/landing/Slider1_web.jpg') no-repeat center center/cover;
+background-attachment: fixed;
+}
+.para-content{
+line-height: 1.5;padding: 60px 40px;
+}
+section h2{
+    font-weight: bold;
+    color: #128141;
+    padding: 30px 0 5px 0;
+}
+.scroll {
+    flex: 1;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.slick-slide {
+    margin: 10px
+}
+.slick-slide img {
+    width: 100%;
+    border: 0px solid #fff
+}
+.partner-items div img{
+    border-radius: 20px;
+} 
+.partner-items, .logo-items, .logo-items1{
+    overflow-x: hidden;
+}
+.bg-yellow{
+    background: #FFE79D;
+}
+.border-rad-14{
+    border-radius: 14px;
+}
+.font-12{
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile only view */
+@media all and (max-width: 768px){
+    #home{
+        height: 65vh;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 20%, rgba(0, 0, 0, 0.97) 100%), url('https://www.agrevolution.in/assets/frontend/images/landing/Slider1_web.jpg') no-repeat center center/cover;
+    }
+    .w-md-84{
+        width: 100% !important;
+    }
+    .w-md-25{
+        width: 60%;
+    }
+    .font-1{
+        font-size: 22px;
+    }
+    .para-content{
+        padding: 40px 20px !important;
+    }
+    .width-scroll{
+        flex: 0 0 79%;
+        max-width: 79%;
+    }
+    .carousel3-mobile .box{
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* desktop only view */
+@media all and (min-width: 900px){
+    
+}

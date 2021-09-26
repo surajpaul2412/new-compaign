@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.waterwheelCarousel.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var carousel = $("#carousel").waterwheelCarousel({
+          flankingItems: 3,
+          movingToCenter: function ($item) {
+            $('#callback-output').prepend('movingToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedToCenter: function ($item) {
+            $('#callback-output').prepend('movedToCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movingFromCenter: function ($item) {
+            $('#callback-output').prepend('movingFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          movedFromCenter: function ($item) {
+            $('#callback-output').prepend('movedFromCenter: ' + $item.attr('id') + '<br/>');
+          },
+          clickedCenter: function ($item) {
+            $('#callback-output').prepend('clickedCenter: ' + $item.attr('id') + '<br/>');
+          }
+        });
+
+        $('#prev').bind('click', function () {
+          carousel.prev();
+          return false
+        });
+
+        $('#next').bind('click', function () {
+          carousel.next();
+          return false;
+        });
+
+        $('#reload').bind('click', function () {
+          newOptions = eval("(" + $('#newoptions').val() + ")");
+          carousel.reload(newOptions);
+          return false;
+        });
+
+      });
+    </script>
+
+    <style type="text/css">
+      #carousel {
+        width:100%;
+        height:800px;
+        position:relative;
+        clear:both;
+        overflow:hidden;
+        background:#FFF;
+      }
+      #carousel img {
+        visibility:hidden; /* hide images until carousel can handle them */
+        cursor:pointer; /* otherwise it's not as obvious items can be clicked */
+        opacity: 1 !important;
+      }
+
+      .split-left {
+        width:450px;
+        float:left;
+      }
+      .split-right {
+        width:400px;
+        float:left;
+        margin-left:10px;
+      }
+      #callback-output {
+        height:250px;
+        overflow:scroll;
+      }
+      textarea#newoptions {
+        width:430px;
+      }
+    </style>
+  </head>
+  <body class="container">
+    <div id="carousel">
+      <img src="image/2051594962.png" id="item-1" />
+      <img src="image/2051594962.png" id="item-2" />
+      <img src="image/2051594962.png" id="item-3" />
+      <img src="image/2051594962.png" id="item-4" />
+      <img src="image/2051594962.png" id="item-5" />
+      <img src="image/2051594962.png" id="item-6" />
+      <img src="image/2051594962.png" id="item-7" />
+    </div>
+  </body>
+</html>

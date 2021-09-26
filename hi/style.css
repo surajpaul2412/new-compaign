@@ -105,7 +105,7 @@ section h2{
 .partner-items div img{
     border-radius: 20px;
 } 
-.partner-items, .logo-items, .logo-items1{
+.partner-items, .logo-items, .logo-items1, .video-link-items{
     overflow-x: hidden;
 }
 .bg-yellow{
@@ -117,9 +117,61 @@ section h2{
 .font-12{
     font-size: 12px;
 }
-
-
-
+.modal-dialog .modal-content{
+    box-shadow: none !important;
+}
+.modal-content{
+    background-color: transparent !important;
+}
+.desktop-d-none{
+    display: none !important;
+}
+#float-button{
+    position: fixed;
+    bottom: 0%;
+}
+.card-head-txt{
+    font-size: 0.8rem;
+}
+.card-bottom-txt{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.close-float-card{
+    position: absolute;top: -4%;z-index: 9;right: -2%;
+}
+.close-float-card-img{
+    background: #fff;border-radius: 50%;padding: 6px;box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.close-float-card-reg{
+    position: absolute;top: -2.8%;z-index: 9;right: -2%;
+}
+.close-float-card-img-reg{
+    background: #fff;border-radius: 50%;padding: 6px;box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+.card[class*=border]{
+    border: none;
+}
+.text-green2 {
+    font-family: 'Roboto', sans-serif;
+    color: #27AE60;
+    font-weight: 400;
+}
+.bg-green-dark {
+    background: #06592F;
+}
+.bg-brown {
+    background: #C26639;
+    border-radius: 14px;
+}
+.font-13{
+    font-size: 12px;
+}
+#float-card {
+    position: fixed;
+    bottom: 2%;
+    right: 5%;
+}
 
 
 
@@ -158,6 +210,15 @@ section h2{
     }
     .carousel3-mobile .box{
     }
+    .changebg > h6, .changebg-pink > h6, .changebg-violet > h6{
+        padding-top: 5px !important;
+    }
+    .mobile-d-none{
+        display: none;
+    }
+    .desktop-d-none{
+        display: block !important;
+    }
 }
 
 
@@ -175,6 +236,6 @@ section h2{
 
 
 /* desktop only view */
-@media all and (min-width: 900px){
+@media all and (min-width: 768px){
     
 }
